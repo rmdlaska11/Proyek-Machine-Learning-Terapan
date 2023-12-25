@@ -15,13 +15,11 @@ Dalam era industri 4.0, teknologi komputer dan penambangan data menjadi kunci pe
 
 Berdasarkan latar belakang yang telah dijelaskan diatas, terdapat beberapa masalah yaitu:
 - Bagaimana kita dapat memprediksi risiko seseorang terkena diabetes berdasarkan data klinis seperti kadar glukosa darah, tekanan darah, dan BMI?
-- Apakah terdapat pola atau kombinasi fitur tertentu yang dapat digunakan untuk mengidentifikasi individu dengan risiko tinggi terkena diabetes?
 
 ### Goals
 
 Untuk menjawab masalah yang ada, akan dibuat model prediksi dengan tujuan sebagai berikut:
 - Membangun model klasifikasi yang dapat memprediksi risiko diabetes dengan akurasi tinggi.
-- Mengidentifikasi fitur-fitur yang paling berpengaruh dalam prediksi risiko diabetes.
 
 ### Solution statements
 Solusi yang dapat dilakukan berupa:
@@ -103,7 +101,20 @@ Berdasarkan gambar 2, dapat dilihat variabel outcome telah seimbang dengan jumla
 
 ## Modeling
 
-Pada tahap pemodelan, dua algoritma klasifikasi utama digunakan, yaitu Support Vector Machine. SVM cenderung lebih tangguh terhadap overfitting, terutama dalam situasi di mana jumlah sampel relatif kecil. Hyperparameter tuning juga dilakukan untuk meningkatkan performa model.
+Pada tahap pemodelan, dua algoritma klasifikasi utama digunakan, yaitu Support Vector Machine.  Hyperparameter tuning juga dilakukan untuk meningkatkan performa model. Support Vector Machine (SVM) adalah algoritma pembelajaran mesin yang digunakan untuk tugas klasifikasi dan regresi. Tujuannya adalah untuk menemukan batas keputusan (decision boundary) yang optimal untuk memisahkan dua kelas dalam ruang fitur. SVM berfokus pada pemilihan vektor dukungan (support vectors), yaitu titik-titik data yang paling dekat dengan batas keputusan.
+
+Keunggulan SVM dibandingkan dengan Algoritma Klasifikasi Lain:
+
+- Kemampuan Menangani Ruang Fitur Tinggi: SVM efektif dalam ruang fitur yang memiliki dimensi tinggi, bahkan ketika jumlah fitur melebihi jumlah sampel.
+- Mengatasi Overfitting: SVM dapat mengatasi masalah overfitting dengan mengatur parameter seperti C (cost), yang mengontrol tingkat kompleksitas model.
+- Kemampuan Menangani Data yang Tidak Linier: SVM dapat mengatasi masalah klasifikasi non-linier melalui penggunaan kernel, seperti kernel polinomial atau radial basis function (RBF).
+
+Proses Membuat Model SVM:
+
+- Pemilihan Kernel: Pilih jenis kernel yang sesuai dengan karakteristik data. Misalnya, kernel linear untuk data yang linier terpisah, kernel polinomial untuk data yang tidak linier, dan kernel RBF untuk kasus umum.
+- Pemilihan Parameter: Tentukan parameter kernel dan parameter C (cost) dengan menggunakan teknik validasi silang (cross-validation) atau pencarian grid untuk mencari kombinasi parameter terbaik.
+- Pelatihan Model: Latih model SVM pada data pelatihan menggunakan parameter yang telah dipilih.
+- Evaluasi Model: Evaluasi kinerja model pada data uji untuk memastikan bahwa model dapat melakukan prediksi dengan baik pada data yang belum pernah dilihat sebelumnya.
 
 Tabel 2. Perbandingan SVM sebelum dan Sesudah Tuning Hyperparameter
 
@@ -160,7 +171,7 @@ Berdasarkan hasil classification report di atas:
 - Rata-rata Terimbang (Weighted Avg):
   Rata-rata terimbang adalah rata-rata tertimbang berdasarkan jumlah instance dalam setiap kelas. Nilai precision, recall, dan f1-score rata-rata terimbang adalah 0.94, 0.93, dan 0.93, secara berturut-turut.
 
-**Kesimpulan** :  Proyek ini bertujuan untuk mengembangkan model klasifikasi yang dapat membantu dalam prediksi risiko diabetes pada individu berdasarkan data klinis. Dengan menggunakan algoritma klasifikasi dan melakukan hyperparameter tuning, diperolehlah akurasi sebesar 93%.
+**Kesimpulan** :  Proyek ini bertujuan untuk mengembangkan model klasifikasi yang dapat membantu dalam prediksi risiko diabetes pada individu berdasarkan data klinis. Dengan menggunakan algoritma klasifikasi dan melakukan hyperparameter tuning, diperolehlah akurasi sebesar 93% menggunakan algoritma *support vector machine* dengan C =1 dan Gamma = 10.
 
 **Referensi** :
 
