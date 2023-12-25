@@ -114,9 +114,51 @@ Tabel 2. Perbandingan SVM sebelum dan Sesudah Tuning Hyperparameter
 ## Evaluation
 Metrik evaluasi yang digunakan meliputi akurasi, presisi, recall, dan F1 score. Hasil model dievaluasi berdasarkan metrik-metrik ini untuk mengukur sejauh mana model dapat memprediksi risiko diabetes dengan baik.
 
-![metrik evaluasi](https://github.com/rmdlaska11/Proyek-Machine-Learning-Terapan/assets/121273531/79c68252-17aa-4b01-b0a8-15e998342940)
+![Confusion Matrix](https://github.com/rmdlaska11/Proyek-Machine-Learning-Terapan/assets/121273531/e1c16e47-e283-4c04-a237-a67c9eeffa97)
 
-Gambar 3. Hasil Confusion Matrix dan metriks evaluasi
+Gambar 3. Hasil Confusion Matrix
+
+Tabel 3. Hasil Classification Report
+
+|              |  Precision  |  Recall | f1-score  |  Support |
+|--------------|:-----------:|:-------:|:---------:|---------:|
+| 0            |      0.88   |    1.00 | 0.93      |    91    |
+| 1            |      1.00   |    0.85 | 0.92      |    85    |
+|              |             |         |           |          |
+| accuracy     |             |         |   0.93    |   176    |
+| macro avg    |    0.94     |   0.92  |   0.93    |    176   |
+| weighted avg |    0.94     |   0.93  |   0.93    |     176  |
+
+Berdasarkan hasil classification report di atas:
+
+- Kelas 0:
+  * Precision: 0.88
+    Dari prediksi positif yang dilakukan untuk kelas 0, 88% di antaranya benar.
+  * Recall: 1.00
+    Model berhasil mendeteksi semua instance positif yang sebenarnya dari kelas 0.
+  * F1-Score: 0.93
+    F1-score adalah rata-rata harmonik dari precision dan recall, dan nilai ini mencapai 0.93.
+  * Support: 91
+    Terdapat 91 instance dalam kelas 0 pada dataset.
+
+- Kelas 1:
+  * Precision: 1.00
+            Dari prediksi positif yang dilakukan untuk kelas 1, 100% di antaranya benar.
+  * Recall: 0.85
+            Model berhasil mendeteksi 85% dari instance positif yang sebenarnya dari kelas 1.
+  * F1-Score: 0.92
+            F1-score adalah rata-rata harmonik dari precision dan recall, dan nilai ini mencapai 0.92.
+  * Support: 85
+            Terdapat 85 instance dalam kelas 1 pada dataset.
+
+- Akurasi (Accuracy):
+  Akurasi adalah ukuran keseluruhan kinerja model, yang mencapai 0.93. Ini mengukur sejauh mana model dapat memprediksi keseluruhan kelas dengan benar.
+
+- Rata-rata Makro (Macro Avg):
+  Rata-rata makro adalah rata-rata aritmatika dari metrik-metrik (precision, recall, f1-score) untuk setiap kelas. Nilai precision, recall, dan f1-score rata-rata makro adalah 0.94, 0.92, dan 0.93, secara berturut-turut.
+
+- Rata-rata Terimbang (Weighted Avg):
+  Rata-rata terimbang adalah rata-rata tertimbang berdasarkan jumlah instance dalam setiap kelas. Nilai precision, recall, dan f1-score rata-rata terimbang adalah 0.94, 0.93, dan 0.93, secara berturut-turut.
 
 **Kesimpulan** :  Proyek ini bertujuan untuk mengembangkan model klasifikasi yang dapat membantu dalam prediksi risiko diabetes pada individu berdasarkan data klinis. Dengan menggunakan algoritma klasifikasi dan melakukan hyperparameter tuning, diperolehlah akurasi sebesar 93%.
 
