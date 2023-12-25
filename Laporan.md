@@ -56,7 +56,18 @@ Untuk memahami Diabetes dataset akan menggunakan beberapa tahapan dari teknik *E
 
 1.   Deskripsi Variabel
 
-![Tabel info](https://github.com/rmdlaska11/Proyek-Machine-Learning-Terapan/assets/121273531/48c5b1b3-6985-4b57-861b-969a22756c32)
+
+| # | Column                   | Non-Null Count | Dtype   |
+|---|--------------------------|----------------|---------|
+| 0 | Pregnancies              | 768 non-null   | int64   |
+| 1 | Glucose                  | 768 non-null   | int64   |
+| 2 | BloodPressure            | 768 non-null   | int64   |
+| 3 | SkinThickness            | 768 non-null   | int64   |
+| 4 | Insulin                  | 768 non-null   | int64   |
+| 5 | BMI                      | 768 non-null   | float64 |
+| 6 | DiabetesPedigreeFunction | 768 non-null   | float64 |
+| 7 | Age                      | 768 non-null   | int64   |
+| 8 | Outcome                  | 768 non-null   | intt64  |
 
 Tabel 1. Info dataset
 
