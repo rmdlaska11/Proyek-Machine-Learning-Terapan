@@ -33,7 +33,7 @@ Data atau dataset yang digunakan pada proyek *machine learning* ini adalah data 
 - Link dataset dapat dilihat dari tautan berikut : [Diabetes Dataset](https://www.kaggle.com/datasets/whenamancodes/predict-diabities/data).
 
 
-### Variabel-variabel pada Motorcycle dataset adalah sebagai berikut:  
+### Variabel-variabel pada Diabetes dataset adalah sebagai berikut:  
 * Pregnancies   : menyatakan jumlah kehamilan
 * Glucose       : menyatakan kadar Glukosa dalam darah
 * BloodPressure : menyatakan pengukuran tekanan darah
